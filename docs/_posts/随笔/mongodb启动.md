@@ -8,5 +8,5 @@ categories:
 tags: 
   - 
 ---
-
+/usr/local/mongodb/bin
 本机启动 mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log --fork
