@@ -1,3 +1,20 @@
+---
+title: nest基础
+date: 2022-02-15 15:42:03
+permalink: /pages/f33401/
+categories:
+  - 后端
+  - Nest
+tags:
+  - 
+---
+<!--
+ * @Author: Jingdongdong
+ * @Date: 2022-02-15 15:42:03
+ * @LastEditTime: 2022-02-15 16:13:43
+ * @LastEditors: Jingdongdong
+ * @Description: 
+-->
 # nest框架的使用
 nest是基于express开发的框架,使用mvc思想
 
@@ -66,3 +83,5 @@ former
 
 // 使用依赖注入替换typegoose
  ` constructor(@InjectModel(Posts) private readonly postModel:ModelType<Posts>){} `
+
+ 
