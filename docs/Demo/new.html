@@ -1,0 +1,68 @@
+<!--
+ * @Author: Jingdongdong
+ * @Date: 2022-03-17 16:51:01
+ * @LastEditTime: 2022-03-17 16:56:03
+ * @LastEditors: Jingdongdong
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function objectFactory() {
+            let newObject = null;
+            let constructor = Array.prototype.shift.call(arguments);
+            let result = null;
+            // 判断参数是否是一个函数
+            if (typeof constructor !== "function") {
+                console.error("type error");
+                return;
+            }
+            // 新建一个空对象，对象的原型为构造函数的 prototype 对象
+            newObject = Object.create(constructor.prototype);
+            // 将 this 指向新建对象，并执行函数
+            result = constructor.apply(newObject, arguments);
+            // 判断返回对象
+            let flag = result && (typeof result === "object" || typeof result === "function");
+            // 判断返回结果
+            return flag ? result : newObject;
+        }
+        // 使用方法
+        const obj = objectFactory(Funs, "hello", "world")
+        console.log(obj);
+
+        function myNew(fn, ...args) {
+            // 创建了一个新的空对象
+            const obj = Object.create(fn.prototype);
+            // 将对象的隐式原型 `__proto__` 指向构造函数的显示原型 `prototype` 对象
+            obj.__proto__ = fn.prototype;
+            // 执行构造函数,为这个新对象添加属性,让this 指向这个对象
+            fn.apply(obj, args);
+            // 返回这个新对象
+            return obj;
+        }
+        function Funs() {
+            this.name = "jingdongdong";
+            this.age = 18;
+        }
+       const funs =  new Funs()
+       console.log(funs);
+        const mynew = myNew(Funs, "hello", "world")
+        console.log(mynew);
+        console.log(mynew === obj);
+        console.log(typeof mynew);
+        console.log(typeof obj);
+       
+
+    </script>
+</body>
+
+</html>
