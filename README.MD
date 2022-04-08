@@ -1,14 +1,14 @@
 <!--
  * @Author: Jingdongdong
  * @Date: 2021-10-08 16:31:39
- * @LastEditTime: 2022-03-01 16:37:25
- * @LastEditors: Jingdongdong
- * @Description: 
+ * @LastEditTime: 2022-04-11 20:14:42
+ * @LastEditors: Please set LastEditors
+ * @Description:
 -->
 
 <h2 align="center">sims-doc</h2>
 
-## 介绍
+## 介绍 
 简洁高效的知识管理库
 
 ## JS专精系列
@@ -18,7 +18,7 @@
 ## VUE专精系列
 1. 2.0和3.0版本的数据响应式原理
 2. 手写Vue router,源码理解
-4. 手写Vuex,源码理解 
+4. 手写Vuex,源码理解  
 
 ## Node专精系列
 1. 系统自带模块
