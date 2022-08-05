@@ -16,7 +16,7 @@ echo 'yalibook.com' > CNAME
 git init
 git add -A
 git commit -m "deploy"
-git push -f https://github.com/sroxck/sroxck.github.io.git master:gh-pages # 推送到github gh-pages分支
+git push -f git@github.com:sroxck/sroxck.github.io.git master:gh-pages # 推送到github gh-pages分支
 
 # deploy to coding pages
 # echo 'www.sroxck.com\nsroxck.com' > CNAME  # 自定义域名
