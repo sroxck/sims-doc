@@ -42,6 +42,10 @@ module.exports = [
     ],
   },
   {
+    text: '记录',
+    link: '/record/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
+  },
+  {
     text: '后端',
     link: '/java/',
     items: [
